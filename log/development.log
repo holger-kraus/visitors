@@ -1,0 +1,110 @@
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWeeks (20220618171954)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "weeks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220618171954"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-18 17:20:02.230631"], ["updated_at", "2022-06-18 17:20:02.230631"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-18 19:20:28 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/innoq/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/innoq/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.7ms | Allocations: 748)
+Completed 200 OK in 33ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 7098)
+
+
+Started GET "/weeks" for ::1 at 2022-06-18 19:20:42 +0200
+Processing by WeeksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weeks/index.html.erb within layouts/application
+  [1m[36mWeek Load (0.3ms)[0m  [1m[34mSELECT "weeks".* FROM "weeks"[0m
+  ↳ app/views/weeks/index.html.erb:6
+  Rendered weeks/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1248)
+  Rendered layout layouts/application.html.erb (Duration: 418.8ms | Allocations: 94253)
+Completed 200 OK in 431ms (Views: 422.6ms | ActiveRecord: 0.3ms | Allocations: 96068)
+
+
+Started GET "/weeks/new" for ::1 at 2022-06-18 19:20:45 +0200
+Processing by WeeksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering weeks/new.html.erb within layouts/application
+  Rendered weeks/_form.html.erb (Duration: 33.3ms | Allocations: 5188)
+  Rendered weeks/new.html.erb within layouts/application (Duration: 35.3ms | Allocations: 5527)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 7771)
+Completed 200 OK in 64ms (Views: 42.9ms | ActiveRecord: 2.5ms | Allocations: 12255)
+
+
+Started POST "/weeks" for ::1 at 2022-06-18 19:20:52 +0200
+Processing by WeeksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "week"=>{"name"=>"halo"}, "commit"=>"Create Week"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/weeks_controller.rb:27:in `block in create'
+  [1m[36mWeek Create (1.0ms)[0m  [1m[32mINSERT INTO "weeks" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "halo"], ["created_at", "2022-06-18 17:20:52.066471"], ["updated_at", "2022-06-18 17:20:52.066471"]]
+  ↳ app/controllers/weeks_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/weeks_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/weeks/1
+Completed 302 Found in 25ms (ActiveRecord: 3.1ms | Allocations: 3301)
+
+
+Started GET "/weeks/1" for ::1 at 2022-06-18 19:20:52 +0200
+Processing by WeeksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWeek Load (0.5ms)[0m  [1m[34mSELECT "weeks".* FROM "weeks" WHERE "weeks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/weeks_controller.rb:63:in `set_week'
+  Rendering layout layouts/application.html.erb
+  Rendering weeks/show.html.erb within layouts/application
+  Rendered weeks/_week.html.erb (Duration: 1.8ms | Allocations: 176)
+  Rendered weeks/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1435)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3670)
+Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 0.5ms | Allocations: 6397)
+
+
+Started GET "/weeks" for 127.0.0.1 at 2022-06-18 19:23:03 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeeksController#index as HTML
+Started GET "/weeks" for 127.0.0.1 at 2022-06-18 19:23:06 +0200
+Processing by WeeksController#index as HTML
+Started GET "/posts" for 127.0.0.1 at 2022-06-18 19:24:46 +0200
+Started GET "/" for 127.0.0.1 at 2022-06-18 19:24:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/innoq/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/innoq/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 811)
+Completed 200 OK in 35ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 5341)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering weeks/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering weeks/index.html.erb within layouts/application
+  [1m[36mWeek Load (19.8ms)[0m  [1m[34mSELECT "weeks".* FROM "weeks"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/weeks/index.html.erb:6
+  ↳ app/views/weeks/index.html.erb:6
+  [1m[36mWeek Load (0.3ms)[0m  [1m[34mSELECT "weeks".* FROM "weeks"[0m
+  ↳ app/views/weeks/index.html.erb:6
+  Rendered weeks/_week.html.erb (Duration: 7.8ms | Allocations: 227)
+  Rendered weeks/_week.html.erb (Duration: 8.0ms | Allocations: 260)
+  Rendered weeks/index.html.erb within layouts/application (Duration: 497.6ms | Allocations: 13374)
+  Rendered weeks/index.html.erb within layouts/application (Duration: 501.3ms | Allocations: 13583)
+  Rendered layout layouts/application.html.erb (Duration: 919.9ms | Allocations: 75574)
+Completed 200 OK in 50830161ms (Views: 1076.6ms | ActiveRecord: 2.1ms | Allocations: 356044)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 941.5ms | Allocations: 79135)
+Completed 200 OK in 50833727ms (Views: 1131.2ms | ActiveRecord: 21.0ms | Allocations: 367976)
+
+
