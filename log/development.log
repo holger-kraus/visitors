@@ -108,3 +108,10 @@ Completed 200 OK in 50830161ms (Views: 1076.6ms | ActiveRecord: 2.1ms | Allocati
 Completed 200 OK in 50833727ms (Views: 1131.2ms | ActiveRecord: 21.0ms | Allocations: 367976)
 
 
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWeeks (20220618171954)
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (102.6ms)[0m  [1m[35mCREATE TABLE "weeks" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
