@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+<link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="all">
+
+  <div class="holger">
+    <div class="main__header">
+      <a href="/weeks/<%= @week.previous %>">
+      <button class="circle">&lt</button></a>
+      <p class="main__week"><%=@week.name %></p>
+    <a href="/weeks/<%= @week.next %>">
+    <button class="circle">&gt</button></a>
+    </div>
+
+
+
+  <div class ="thegrid">
+    <% @week.days.each_with_index do |day,i|  %>
+      <div class="day_panel<%=i+1%>">
+        <div class= "day<%=i+1%>"><%= day.name %></div>
+      </div>
+      <div class="ribbon<%=i+1%>">
+        <% day.timeslots.each do |timeslot|  %>
+          <% datum= day.name[-5, -1] %>
+          <% tag = day.tstamp.day %>
+          <% month = day.tstamp.month %>
+          <% year = day.tstamp.year %>
+          <% classname = (timeslot.booker.nil? ||timeslot.booker.empty?) ? 'timeslot timeslot_free':'timeslot timeslot_occupied' %>
+        <button id="<%= timeslot.id%>" data-day="<%= tag %>"data-hour="<%= timeslot.name %>" data-month="<%= month %>" data-year="<%= year%>" title="<%=timeslot.booker %>"data-time="<%=timeslot.name%>" class= "<%= classname %>" ><%= timeslot.name %></button>
+        <% end %>
+      </div>
+    <% end %>
+    <section class="overlay">
+      <div class="overlay__container overlay__container_avatarpic">
+        <form action="/test" class="form__container" validate >
+          <h1 class="form__title">Buche Deinen Besuch bei Holger am 17.7. um 16:00Uhr</h1>
+          <input id="hour" type="hidden"/>
+          <input id="year" type="hidden"/>
+          <input id="month" type="hidden"/>
+          <input id="day" type="hidden"/>
+          <input id="timeslot_id" type="hidden"/>
+          <label class="form__label " for="avatarpic-link-input">Wie heißt Du?</label>
+          <input id="avatarpic-link-input" type="url" name="avatarpic-link"
+                 class="form__field form__field_booker" placeholder="Vorname und Nachname" required/>
+          <!--            <span id="avatarpic-link-input-error" class="form__field-error"></span>-->
+          <label class="form__name-label">An welche Email-Adresse darf ich die Bestätigung schicken?</label>
+          <input id="avatarpic-link-input" type="email" name="email"
+                 class="form__field form__field_email" placeholder="Deine Email-Adresse " required/>
+          <!--          <span id="avatarpic-link-input-error" class="form__field-error"></span>-->
+          <button type="submit" class="form__save">Buchen</button>
+        </form>
+        <button class="overlay__close-button"></button>
+      </div>
+    </section>
+</html>

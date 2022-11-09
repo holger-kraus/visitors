@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  db:
+  #  command: pg_ctl -D /var/lib/postgresql/data -l logfile start
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: holger
+      POSTGRES_PASSWORD: heidelbert
+    volumes:
+      - $PWD/my-postgres.conf:/etc/postgresql/postgresql.conf
+
+    ports:
+      - 5432:5432
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

@@ -1,0 +1,353 @@
+.holger {
+  border:3px solid black;
+  margin: 10px auto;
+  width:600px;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+.all {
+  background-color: lightcoral;
+}
+.main__header{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.main__headline {
+
+  font-size:12px;
+  width:600px;
+  margin: 10px auto;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+.main__week {
+  font_size: 4px;
+  font-weight: normal;
+  border:1px red;
+  line-height: 15px;
+}
+.thegrid {
+  background-color: lightcoral;
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: 30%, 60%;
+  grid-template-rows: repeat(7, 100px);
+  overflow:hidden;
+}
+.day_panel1 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel2 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel3 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel4 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel5 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 5/6;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel6 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 6/7;
+  align-self: center;
+  background-color: #888888;
+}
+.day_panel7 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 7/8;
+  align-self: center;
+  background-color: #888888;
+}
+.day1 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  height:50px;
+  width: 150px;
+ font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+
+.day4 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row: 4/5;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+.day5 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row: 5/6;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+.day6 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row:6/7;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+.day7 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row:7/8;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+
+.day3 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row: 3/4;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px black;
+}
+.day2 {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-column: 1/2;
+  justify-self: start;
+  align-self: start;
+  grid-row: 2/3;
+  height:50px;
+  width: 150px;
+  font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px black;
+}
+.ribbon1 {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 2/3;
+  grid-row: 1/2;
+   align-self: center;
+  background-color: #888888;
+
+}
+.ribbon9 {
+  display: flex;
+  flex-direction: row;
+  wrap: wrap;
+  grid-column: 2/3;
+  grid-row: 6/7;
+  height: 100%;
+  width:100%;
+
+  background-color: #888888;
+}
+.ribbon2 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #888888;
+}
+.ribbon3 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-color: #888888;
+}
+.ribbon4 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  background-color: #888888;
+}
+.ribbon5 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  background-color: #888888;
+}
+.ribbon6 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 6/7;
+  background-color: #888888;
+}
+.ribbon7 {
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 7/8;
+  background-color: #888888;
+  overflow:hidden;
+}
+.timeslot {
+
+  border:2px solid black;
+  border-radius: 10px;
+  width:80px;
+  height:50px;
+  font-size:20px;
+  background-color:yellow;
+  align-self: center;
+  box-shadow: 5px 5px black;
+
+}
+
+
+
+
+
+.
+
+
+
+
+.main__header {
+  border:2px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:2px solid green;
+  width:30px;
+  height:30px;
+  border-radius: 100%;
+}
+.
+
+
+
+

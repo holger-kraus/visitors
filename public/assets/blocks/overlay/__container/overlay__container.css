@@ -1,0 +1,12 @@
+.overlay__container {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  height:350px;
+  background-color: lightcoral;
+}
+

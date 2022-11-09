@@ -1,0 +1,9 @@
+.form__label {
+  padding: 2px 2px;
+  margin:0;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  width:100%;
+  font-weight: bold;
+  line-size: 12px;
+}

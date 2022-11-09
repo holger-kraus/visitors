@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <%=stylesheet_link_tag "application" %>
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="all">
+<div class="holger">
+  <div class="main__header">
+    <button class="circle">&lt</button>
+    <p class="main__week">KW 28, 11.7.2022-18.7.2022</p>
+    <button class="circle">&gt</button>
+  </div>
+
+  <div class ="thegrid">
+    <div class="day_panel1">
+      <div class= "day1">Montag, der 11.7.</div>
+    </div>
+
+    <div class="ribbon1">
+      <button class="timeslot"> 14:00</button>
+    </div>
+    <div class="day_panel2"></div>
+    <div class= "day2">Dienstag, der 12.7.</div>
+    <div class="ribbon1">
+      <button  data-day="12.7." data-time="14:00" class= "timeslot" > 14:00</button>
+      <button   data-day="12.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button  data-day="12.7." data-time="16:00" class="timeslot"> 16:20</button>
+    </div>
+    <div class="ribbon2">
+      <button data-day="12.7." data-time="14:00" class="timeslot"> 14:00 </button>
+      <button data-day="12.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button data-day="12.7." data-time="16:00"class="timeslot"> 16:00</button>
+    </div>
+    <div class="day_panel2">
+      <div class= "day1">Montag, der 11.7.</div></div>
+    <div class="day_panel2">
+      <div class= "day3">Dienstag, der 12.7.</div></div>
+    <div class="ribbon3">
+      <button data-day="13.7." data-time="14:00" class="timeslot"> 14:00</button>
+      <button data-day="13.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button data-day="13.7." data-time="16:00" class="timeslot"> 16:00</button>
+    </div>
+    <div class="day_panel3">
+      <div class="day3"> Mittwoch, der 13.7.</div>
+    </div>
+    <div class="day_panel4">
+      <div class="day4"> Donnerstag, der 14.7.7.</div>
+    </div>
+    <div class="ribbon4">
+      <button data-day="14.7." data-time="14:00" class="timeslot"> 14:00</button>
+      <button data-day="14.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button data-day="14.7." data-time="16:00" class="timeslot"> 16:00</button>
+    </div>
+    <div class="day_panel5">
+      <div class="day4"> Freitag, der 15,7.7.</div>
+    </div>
+    <div class="ribbon5">
+      <button data-day="15.7." data-time="14:00" class="timeslot"> 14:00</button>
+      <button data-day="15.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button data-day="15.7." data-time="16:00" class="timeslot"> 16:00</button>
+    </div>
+    <div class="day_panel6">
+      <div class="day5"> Samstag, der 16.7.7.</div>
+    </div>
+    <div class="ribbon6">
+      <button data-day="14.7." data-time="14:00" class="timeslot"> 14:00</button>
+      <button data-day="17.7." data-time="14:00" class="timeslot"> 15:00</button>
+      <button data-day="17.7." data-time="16:00" class="timeslot"> 16:00</button>
+    </div>
+    <div class="day_panel7">
+      <div class="day6"> Sonntag, der 17.7.7.</div>
+    </div>
+    <div class="ribbon7">
+      <button data-day="17.7." data-time="14:00" class="timeslot"> 14:00</button>
+      <button data-day="17.7." data-time="15:00" class="timeslot"> 15:00</button>
+      <button  data-day="17.7." data-time="16:00" class="timeslot"> 16:00</button>
+    </div>
+  </div>
+</div>
+
+<section class="overlay overlay_avatarpic">
+  <div class="overlay__container overlay__container_avatarpic">
+    <form action="#" class="form" novalidate>
+      <h2 class="form__title">Buche Deinen Besuch bei Holger am 17.7. um 16:00Uhr</h2>
+      <label class="form__label form__label_title" for="avatarpic-link-input">
+        <input id="avatarpic-link-input" type="url" name="avatarpic-link"
+               class="form__field form__field_title" placeholder="Wie heißt Du?" required>
+        <span id="avatarpic-link-input-error" class="form__field-error"></span>
+      </label>
+      <button type="submit" class="form__save">Buchen</button>
+    </form>
+    <button class="overlay__close-button"></button>
+  </div>
+</section>
+
+</body>
+
+</html>
