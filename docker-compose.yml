@@ -8,7 +8,6 @@ services:
     environment:
       POSTGRES_USER: holger
       POSTGRES_PASSWORD: heidelbert
-      PGDATA : /var/lib/postgresql/data
     volumes:
       - $PWD/data:/var/lib/postgresql/data
 
