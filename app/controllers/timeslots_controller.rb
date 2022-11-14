@@ -45,6 +45,7 @@ class TimeslotsController < ApplicationController
         respond_to do |format|
       if @timeslot.update(timeslotparams)
         AppointmentMailer.booked(params[:email],params[:year],params[:month],params[:day],params[:hour]).deliver_later
+        NotificationMailer.notify(params[:email],params[:year],params[:month],params[:day],params[:hour],params[:booker]).deliver_later
         format.html
         format.json { render :json=>@timeslot }
       else
