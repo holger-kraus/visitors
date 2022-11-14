@@ -6,11 +6,6 @@
 #
 production:
   adapter: "postgresql"
-  #host: "localhost"
-  #port: "5432"# HOST
-  #database: "postgres"
-  #username: "holger"
-  #password: "siedelbert"
   database: "postgres"
   username: "holger"
   password: "heidelbert"

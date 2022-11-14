@@ -8,8 +8,9 @@ services:
     environment:
       POSTGRES_USER: holger
       POSTGRES_PASSWORD: heidelbert
+      PGDATA : /var/lib/postgresql/data
     volumes:
-      - $PWD/my-postgres.conf:/etc/postgresql/postgresql.conf
+      - $PWD/data:/var/lib/postgresql/data
 
     ports:
       - 5432:5432
@@ -20,11 +21,16 @@ services:
 #      - 8080:8080
   web:
     build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
       RAILS_ENV: production
       DATABASE_CLEANER_ALLOW_PRODUCTION: "true"
       RAILS_SERVE_STATIC_FILES: "true"
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+      SMTP_ADDRESS: "smtp.gmail.com"
+      SMTP_PORT: "587"
+      DOMAIN: "domain.of.sender.net"
+      SMTP_USER: "herr.holger.kraus@googlemail.com"
+      SMTP_PASSWORD: "jvcuxaflveohulgy"
     volumes:
       - .:/myapp
     ports:
