@@ -1,10 +1,44 @@
 <p style="color: green"><%= notice %></p>
+<body class="page">
+<div class="week-link">zurück zur Woche</div>
+<div class="page__content">
+  <div class="day__panel">
+    <div class= "day"><%= @day.name %></div>
 
-<%= render @day %>
-
-<div>
-  <%= link_to "Edit this day", edit_day_path(@day) %> |
-  <%= link_to "Back to days", days_path %>
-
-  <%= button_to "Destroy this day", @day, method: :delete %>
+  </div>
+  <div class="timeslot__ribbon">
+    <% @day.timeslots.each_with_index do |timeslot,i|  %>
+      <% datum= @day.name[-5, -1] %>
+      <% tag = @day.tstamp.day %>
+      <% month = @day.tstamp.month %>
+      <% year = @day.tstamp.year %>
+      <% classname = (timeslot.booker.nil? ||timeslot.booker.empty?) ? 'timeslot timeslot_free':'timeslot timeslot_occupied' %>
+      <button id="<%= timeslot.id%>" data-day="<%= tag %>"data-hour="<%= timeslot.name %>" data-month="<%= month %>" data-year="<%= year%>" title="<%=timeslot.booker %>"data-time="<%=timeslot.name%>" class= "<%= classname %>" ><%= timeslot.name %></button>
+    <% end %>
+  </div>
 </div>
+
+</div>
+<section class="overlay">
+  <div class="overlay__container overlay__container_avatarpic">
+    <form action="/test" class="form__container" validate >
+      <h1 class="form__title">Buche Deinen Besuch bei Holger am 17.7. um 16:00Uhr</h1>
+      <input id="hour" type="hidden"/>
+      <input id="year" type="hidden"/>
+      <input id="month" type="hidden"/>
+      <input id="day" type="hidden"/>
+      <input id="timeslot_id" type="hidden"/>
+      <label class="form__label " for="avatarpic-link-input">Wie heißt Du?</label>
+      <input id="avatarpic-link-input" type="url" name="avatarpic-link"
+             class="form__field form__field_booker" placeholder="Vorname und Nachname" required/>
+      <!--            <span id="avatarpic-link-input-error" class="form__field-error"></span>-->
+      <label class="form__name-label">An welche Email-Adresse darf ich die Bestätigung schicken?</label>
+      <input id="avatarpic-link-input" type="email" name="email"
+             class="form__field form__field_email" placeholder="Deine Email-Adresse " required/>
+      <!--          <span id="avatarpic-link-input-error" class="form__field-error"></span>-->
+      <button type="submit" class="form__save">Buchen</button>
+    </form>
+    <button class="overlay__close-button"></button>
+  </div>
+</section>
+</body>

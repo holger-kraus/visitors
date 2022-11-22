@@ -35,7 +35,7 @@
   <div class ="thegrid">
     <% @week.days.each_with_index do |day,i|  %>
       <div class="day_panel<%=i+1%>">
-        <div class= "day<%=i+1%>"><%= day.name %></div>
+        <div data-id="<%= day.id %>" class= "day day<%=i+1%>"><%= day.name %></div>
       </div>
       <div class="ribbon<%=i+1%>">
         <% day.timeslots.each do |timeslot|  %>
@@ -70,4 +70,4 @@
         <button class="overlay__close-button"></button>
       </div>
     </section>
-</html>
+  </div>

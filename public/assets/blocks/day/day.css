@@ -1,0 +1,17 @@
+@import url("__panel/day__panel.css");
+
+.day {
+  background-color: yellow;
+  border:2px dotted red;
+  grid-row: 1/2;
+  justify-self: start;
+  align-self: start;
+  height:50px;
+  width: 150px;
+ font-size:20px;
+  align-self: center;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}

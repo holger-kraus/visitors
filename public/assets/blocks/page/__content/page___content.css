@@ -1,0 +1,12 @@
+.page__content {
+  margin 0;
+  margin: 20px auto;
+  width:200px;
+  border-radius: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100%;
+  grid-template-rows: 10%, 90%;
+  border: 2px solid black;
+  overflow: hidden;
+}
