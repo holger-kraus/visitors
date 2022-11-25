@@ -71,9 +71,9 @@ function successCallback(response) {
  }
  function openPage(event) {
   const day_id= event.target.dataset.id;
-   if ( window.innerWidth <450) {
+   // if ( window.innerWidth <=450) {
      window.open("/days/"+ day_id);
-   }
+   // }
  }
 
 // function tagOcupied(timeslot_id) {
