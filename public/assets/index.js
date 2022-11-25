@@ -43,9 +43,13 @@ function tagOccupied(timeslot_id, booker) {
 }
 function bookDate(event) {
   const tag= event.target.dataset.day;
+  console.log("Tag:" + tag);
   const monat= event.target.dataset.month;
+  console.log("Monat:" + monat);
   const  hour = event.target.dataset.hour;
+  console.log("Stunde:" + hour);
   const jahr = event.target.dataset.year;
+  console.log("Jahr:" + jahr);
   const id = event.target.id;
 
   openPopup(tag, monat, hour, jahr, id);
@@ -65,7 +69,12 @@ function successCallback(response) {
    tagOccupied(data.id, data.booker);
    console.log(data)
  }
-
+ function openPage(event) {
+  const day_id= event.target.dataset.id;
+   if ( window.innerWidth <450) {
+     window.open("/days/"+ day_id);
+   }
+ }
 
 // function tagOcupied(timeslot_id) {
 //   timeslot=document.getElementBy(timeslot_id)
@@ -115,7 +124,10 @@ submitButton.addEventListener("click", (event)=> {
 });
 
 
-
+const days = document.querySelectorAll(".day");
+days.forEach(day =>{
+  day.addEventListener("click",openPage );
+})
 
 
 const timeslots = document.querySelectorAll(".timeslot_free");

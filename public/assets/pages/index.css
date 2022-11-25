@@ -4,5 +4,8 @@
 @import url("../../assets/blocks/form/form.css");
 @import url("../../assets/blocks/overlay/overlay.css");
 @import url("../../assets/blocks/overlay/_opened/overlay_opened.css");
-
+@import url("../../assets/blocks/day/day.css");
+@import url("../../assets/blocks/page/page.css");
+@import url("../../assets/blocks/week-link/week-link.css");
+@import url("../../assets/blocks/timeslot/timeslot.css");
 

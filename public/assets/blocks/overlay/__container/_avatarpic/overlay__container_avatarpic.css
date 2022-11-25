@@ -3,4 +3,11 @@
   height:350px;
   top: 180px;
 }
+@media (max-width : 425px) {
+  .overlay__container_avatarpic {
+    width: 150px;
+    height:350px;
+    top: 180px;
+  }
+}
 

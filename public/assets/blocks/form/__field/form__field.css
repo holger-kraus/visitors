@@ -11,5 +11,20 @@
   border-bottom: 2px solid black;
   border: 1px solid black;
 }
+@media (max-width : 450px) {
+ .form__field {
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 0 5px;
+  width: 100px;
+  height: 28px;
+  border: none;
+  border-bottom: 2px solid black;
+  border: 1px solid black;
+ }
+}
 
 

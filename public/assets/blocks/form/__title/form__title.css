@@ -17,7 +17,28 @@
   width:390px;
   line-height: 15px;
   color: black;
-
+}
+@media (max-width : 425px) {
+  .form__title {
+    margin: 0 0 5px 0;
+    padding: 0;
+    width:100px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+    color: black;
+  }
+  .form__name-label {
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 12px;
+    width:100px;
+    line-height: 12px;
+    color: black;
+  }
 }
 
 
