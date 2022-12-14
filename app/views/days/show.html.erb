@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
 <body class="page">
-<div class="week-link">zurück zur Woche</div>
-<div class="page__content">
+<%= link_to week_path(@day.week) do %>
+ <div class="week-link">zurück zur Woche</div>
+<% end %>
+  <div class="page__content">
   <div class="day__panel">
     <div class= "day"><%= @day.name %></div>
 
@@ -20,7 +22,7 @@
 
 </div>
 <section class="overlay">
-  <div class="overlay__container overlay__container_avatarpic">
+  <div class="overlay__container">
     <form action="/test" class="form__container" validate >
       <h1 class="form__title">Buche Deinen Besuch bei Holger am 17.7. um 16:00Uhr</h1>
       <input id="hour" type="hidden"/>

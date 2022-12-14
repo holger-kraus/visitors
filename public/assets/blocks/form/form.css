@@ -13,9 +13,18 @@
 
 .form__container {
   display: flex;
-  justify-content: flex-start;
-  padding: 34px 36px 36px;
+  align-items: center;
+  padding: 0;
   flex-direction: column;
+}
+@media (max-width : 450px) {
+  .form__container {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+  }
 }
 
 

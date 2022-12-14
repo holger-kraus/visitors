@@ -1,4 +1,5 @@
 .overlay__container {
+  padding: 36px 34px 34px;
   position: absolute;
   background: #FFFFFF;
   box-shadow: 0 0 25px rgba(0, 0, 0, .15);

@@ -47,7 +47,7 @@ end
 #   <%  (first_day..last_day).each do |week_day|
 # }
 day_id=1
-weekid=1
+weekid=42
 timeslot_id=1
 (startdate..enddate).step(7).each do |day|
   create_week(weekid, day)

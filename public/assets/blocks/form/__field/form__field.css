@@ -13,13 +13,13 @@
 }
 @media (max-width : 450px) {
  .form__field {
-  margin-top: 0px;
+  margin: 10px auto 0;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
   padding: 0 0 5px;
-  width: 100px;
+  width: 150px;
   height: 28px;
   border: none;
   border-bottom: 2px solid black;

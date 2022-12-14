@@ -4,9 +4,9 @@
   top: 180px;
 }
 
-@media (max-width : 425px) {
+@media (max-width : 450px) {
   .overlay__container_avatarpic {
-    width: 240px;
+    width: 300px;
     height: 215px;
   }
 }

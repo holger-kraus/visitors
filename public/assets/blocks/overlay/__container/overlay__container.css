@@ -1,12 +1,22 @@
 .overlay__container {
-  position: absolute;
-  background: #FFFFFF;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, .15);
-  border-radius: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 1;
-  height:350px;
-  background-color: lightcoral;
+    padding: 36px 34px 34px;
+    position: absolute;
+    background-color: lightcoral;
+ box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+ border-radius: 10px;
+ top: 200px;
+ left: 50%;
+ transform: translate(-50%, 0);
+ z-index: 1;
+}
+@media (max-width : 450px) {
+  .overlay__container {
+      background-color: lightcoral;
+      top:0px;
+      left: 0px;
+      right:0px;
+      bottom:0px;
+      transform: translate(0, 0);
+  }
 }
 
